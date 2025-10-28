@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Create Vector DB",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/create_vdb.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.rag-env/bin/python",
+            "args": [
+                "--pdf",
+                "flash_attention.pdf",
+                "--vdb", 
+                "vdb.npz"
+            ],
+            "justMyCode": true,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Query Vector DB",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/query_vdb.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.rag-env/bin/python",
+            "args": [
+                "--question",
+                "what is flash attention?",
+                "--vdb",
+                "vdb.npz"
+            ],
+            "justMyCode": true,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Create Vector DB (Custom Args)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/create_vdb.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.rag-env/bin/python",
+            "args": [],
+            "justMyCode": true,
+            "stopOnEntry": false
+        }
+    ]
+}

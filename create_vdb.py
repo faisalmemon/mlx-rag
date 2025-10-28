@@ -1,6 +1,9 @@
 import argparse
 from vdb import vdb_from_pdf
 
+# Run this program like:
+# python create_vdb.py --pdf flash_attention.pdf --vdb vdb.npz 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create a Vector DB from a PDF file")
     # Input
