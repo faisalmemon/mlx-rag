@@ -2,6 +2,7 @@ import mlx.core as mx
 from model import Model
 from typing import List, Optional
 from unstructured.partition.pdf import partition_pdf
+import gc
 
 
 def split_text_into_chunks(text, chunk_size, overlap):
@@ -77,7 +78,6 @@ class VectorDB:
         scores = mx.matmul(query_emb, self.embeddings.T) * 100
         response = self.content[mx.argmax(scores).item()]
         return response
-
     def savez(self, vdb_file) -> None:
         chunk_data, chunk_lengths = chunks_to_mx_array(self.content)
         mx.savez(
@@ -86,7 +86,6 @@ class VectorDB:
             chunk_data=chunk_data,
             chunk_lengths=chunk_lengths,
         )
-
 
 def vdb_from_pdf(pdf_file: str) -> VectorDB:
     model = VectorDB()

@@ -46,6 +46,83 @@
             "args": [],
             "justMyCode": true,
             "stopOnEntry": false
+        },
+        {
+            "name": "Profile Vector DB (cProfile)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "cProfile",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.rag-env/bin/python",
+            "args": [
+                "-o", "profile_output.prof",
+                "-s", "cumulative",
+                "create_vdb.py",
+                "--pdf", "flash_attention.pdf",
+                "--vdb", "vdb.npz"
+            ],
+            "justMyCode": false,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Profile Vector DB (line_profiler)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "line_profiler",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.rag-env/bin/python",
+            "args": [
+                "create_vdb.py",
+                "--pdf", "flash_attention.pdf",
+                "--vdb", "vdb.npz"
+            ],
+            "justMyCode": false,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Profile Vector DB (py-spy)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/profile_with_pyspy.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.rag-env/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Memory Profile Vector DB",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "memory_profiler",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.rag-env/bin/python",
+            "args": [
+                "create_vdb.py",
+                "--pdf", "flash_attention.pdf",
+                "--vdb", "vdb.npz"
+            ],
+            "justMyCode": false,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Comprehensive Profiler",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/comprehensive_profiler.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.rag-env/bin/python",
+            "args": [
+                "--pdf", "flash_attention.pdf",
+                "--vdb", "vdb.npz"
+            ],
+            "justMyCode": false,
+            "stopOnEntry": false
         }
     ]
 }
