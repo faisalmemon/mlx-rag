@@ -1,0 +1,29 @@
+Memory Usage Analysis
+====================
+
+RSS Memory Change: 51.11 MB
+VMS Memory Change: 43.02 MB
+Peak RSS: 120.25 MB
+
+Top 20 Memory Allocations:
+--------------------------------------------------
+1. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/transformers/models/bert/tokenization_bert.py:120: size=2746 KiB (+2746 KiB), count=30525 (+30525), average=92 B
+2. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/transformers/models/bert/tokenization_bert.py:38: size=2404 KiB (+2404 KiB), count=30524 (+30524), average=81 B
+3. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/transformers/models/bert/tokenization_bert.py:37: size=1445 KiB (+1445 KiB), count=30419 (+30419), average=49 B
+4. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/transformers/models/bert/tokenization_bert.py:36: size=828 KiB (+828 KiB), count=30265 (+30265), average=28 B
+5. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/pdftypes.py:331: size=726 KiB (+726 KiB), count=94 (+94), average=7908 B
+6. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/pdfparser.py:124: size=585 KiB (+585 KiB), count=203 (+203), average=2952 B
+7. /Users/faisalm/dev/mlx-community/mlx-rag/vdb.py:28: size=371 KiB (+371 KiB), count=140 (+140), average=2713 B
+8. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/psparser.py:579: size=138 KiB (+138 KiB), count=2388 (+2388), average=59 B
+9. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/psparser.py:621: size=126 KiB (+126 KiB), count=589 (+589), average=218 B
+10. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/nltk/tokenize/destructive.py:191: size=108 KiB (+108 KiB), count=2311 (+2311), average=48 B
+11. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/layout.py:397: size=103 KiB (+103 KiB), count=1460 (+1460), average=72 B
+12. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/layout.py:874: size=89.5 KiB (+89.5 KiB), count=1042 (+1042), average=88 B
+13. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/pdfparser.py:73: size=85.8 KiB (+85.8 KiB), count=2196 (+2196), average=40 B
+14. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/psparser.py:620: size=84.0 KiB (+84.0 KiB), count=1344 (+1344), average=64 B
+15. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/layout.py:900: size=82.2 KiB (+82.2 KiB), count=957 (+957), average=88 B
+16. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/psparser.py:391: size=77.1 KiB (+77.1 KiB), count=3289 (+3289), average=24 B
+17. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/pdfminer/psparser.py:377: size=76.8 KiB (+76.8 KiB), count=2808 (+2808), average=28 B
+18. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/unstructured/partition/pdf_image/pdfminer_processing.py:965: size=65.3 KiB (+65.3 KiB), count=557 (+557), average=120 B
+19. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/nltk/tag/perceptron.py:205: size=62.9 KiB (+62.9 KiB), count=1150 (+1150), average=56 B
+20. /Users/faisalm/dev/mlx-community/mlx-rag/.rag-env/lib/python3.12/site-packages/mlx/nn/layers/base.py:61: size=57.0 KiB (+57.0 KiB), count=270 (+270), average=216 B

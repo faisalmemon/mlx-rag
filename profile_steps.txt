@@ -1,0 +1,16 @@
+Step-by-Step Performance Analysis
+=================================
+
+Total Time: 28.04s
+
+pdf_parsing         :   1.56s (  5.6%)
+model_init          :   1.76s (  6.3%)
+text_chunking       :   0.00s (  0.0%)
+embedding_generation:   0.25s (  0.9%)
+data_saving         :  24.47s ( 87.3%)
+
+Additional Info:
+PDF Elements: 1037
+Content Length: 111,258 chars
+Number of Chunks: 140
+Embedding Shape: [140, 1024]

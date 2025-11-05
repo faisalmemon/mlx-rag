@@ -1,0 +1,24 @@
+MLX RAG Performance Profile Summary
+==================================
+
+Input PDF: flash_attention.pdf
+Output VDB: vdb.npz
+
+Total Execution Time: 36.33s
+Peak Memory Usage: 120.25 MB
+Memory Growth: 51.11 MB
+
+Performance Breakdown:
+  pdf_parsing         :   1.56s (  5.6%)
+  model_init          :   1.76s (  6.3%)
+  text_chunking       :   0.00s (  0.0%)
+  embedding_generation:   0.25s (  0.9%)
+  data_saving         :  24.47s ( 87.3%)
+
+Generated Files:
+  - profile_cprofile.prof (detailed function profiling)
+  - profile_cprofile.txt (human-readable cProfile output)
+  - profile_mlx_only.txt (MLX-specific function calls)
+  - profile_memory.txt (memory allocation details)
+  - profile_steps.txt (step-by-step timing breakdown)
+  - profile_summary.txt (this summary)

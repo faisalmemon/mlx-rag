@@ -1,0 +1,207 @@
+{
+  "similarity_stats": {
+    "mean_similarity": 0.8469758629798889,
+    "std_similarity": 0.08305371552705765,
+    "coefficient_of_variation": 0.09805913269519806,
+    "min_similarity": 0.0,
+    "max_similarity": 0.9892781972885132
+  },
+  "retrieval_quality": {
+    "hit_rate_top1": 0.3333333333333333,
+    "hit_rate_top3": 0.3333333333333333,
+    "hit_rate_top5": 0.3333333333333333,
+    "by_difficulty": {
+      "easy": 1.0,
+      "medium": 0.16666666666666666,
+      "hard": 0.16666666666666666
+    },
+    "by_type": {},
+    "failed_cases": [
+      {
+        "id": "fa_004",
+        "question": "How does Flash Attention achieve memory efficiency without changing the attention output?",
+        "expected_keywords": [
+          "mathematically equivalent",
+          "order of computation",
+          "numerical equivalence"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_005",
+        "question": "Why is recomputation beneficial in Flash Attention despite doing more work?",
+        "expected_keywords": [
+          "compute for memory",
+          "FLOPs",
+          "memory-bound",
+          "compute-bound"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_006",
+        "question": "What is the IO complexity improvement of Flash Attention?",
+        "expected_keywords": [
+          "IO complexity",
+          "O(N\u00b2)",
+          "O(N\u00b2d/M)",
+          "sequence length"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_007",
+        "question": "How does Flash Attention handle the softmax operation across tiles?",
+        "expected_keywords": [
+          "online softmax",
+          "running maximum",
+          "renormalization",
+          "running statistics"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_008",
+        "question": "What is the relationship between SRAM size and Flash Attention's efficiency gains?",
+        "expected_keywords": [
+          "SRAM size",
+          "tile size",
+          "recomputation overhead",
+          "proportional"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_009",
+        "question": "How does Flash Attention's performance scale with sequence length compared to standard attention?",
+        "expected_keywords": [
+          "sequence length scaling",
+          "O(N\u00b2)",
+          "O(N)",
+          "2-4x speedup"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_011",
+        "question": "What are the backward pass optimizations in Flash Attention?",
+        "expected_keywords": [
+          "backward pass",
+          "gradient computation",
+          "recomputes forward pass"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_013",
+        "question": "What types of models benefit most from Flash Attention?",
+        "expected_keywords": [
+          "long sequences",
+          "language models",
+          "vision transformers",
+          "memory bottleneck"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_014",
+        "question": "What speedup does Flash Attention achieve on GPUs?",
+        "expected_keywords": [
+          "2-4x speedup",
+          "A100",
+          "2K tokens",
+          "wall-clock time"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      },
+      {
+        "id": "fa_015",
+        "question": "What is the theoretical foundation that ensures Flash Attention produces identical outputs?",
+        "expected_keywords": [
+          "associativity",
+          "matrix multiplication",
+          "softmax normalization",
+          "mathematical foundation"
+        ],
+        "response_snippet": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm th..."
+      }
+    ]
+  },
+  "response_quality": {
+    "avg_response_length": 1000.0,
+    "responses_with_keywords": 0.6,
+    "sample_responses": [
+      {
+        "question": "What is the main memory bottleneck in standard attention computation?",
+        "response": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3\u00d7 speedup on GPT-2 (seq. length 1K), and 2.4\u00d7 speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Trans",
+        "expected_keywords": [
+          "HBM",
+          "SRAM",
+          "memory bottleneck",
+          "attention matrices"
+        ],
+        "found_keywords": [
+          "HBM",
+          "SRAM"
+        ],
+        "quality_score": 0.5
+      },
+      {
+        "question": "What does Flash Attention stand for?",
+        "response": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3\u00d7 speedup on GPT-2 (seq. length 1K), and 2.4\u00d7 speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Trans",
+        "expected_keywords": [
+          "tiling",
+          "recomputation",
+          "memory hierarchy"
+        ],
+        "found_keywords": [
+          "tiling"
+        ],
+        "quality_score": 0.3333333333333333
+      },
+      {
+        "question": "What are the two main techniques used in Flash Attention?",
+        "response": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3\u00d7 speedup on GPT-2 (seq. length 1K), and 2.4\u00d7 speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Trans",
+        "expected_keywords": [
+          "tiling",
+          "recomputation",
+          "blocks",
+          "SRAM"
+        ],
+        "found_keywords": [
+          "tiling",
+          "SRAM"
+        ],
+        "quality_score": 0.5
+      },
+      {
+        "question": "How does Flash Attention achieve memory efficiency without changing the attention output?",
+        "response": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3\u00d7 speedup on GPT-2 (seq. length 1K), and 2.4\u00d7 speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Trans",
+        "expected_keywords": [
+          "mathematically equivalent",
+          "order of computation",
+          "numerical equivalence"
+        ],
+        "found_keywords": [],
+        "quality_score": 0.0
+      },
+      {
+        "question": "Why is recomputation beneficial in Flash Attention despite doing more work?",
+        "response": "rgue that a missing principle is making attention algorithms IO- aware\u2014accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3\u00d7 speedup on GPT-2 (seq. length 1K), and 2.4\u00d7 speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Trans",
+        "expected_keywords": [
+          "compute for memory",
+          "FLOPs",
+          "memory-bound",
+          "compute-bound"
+        ],
+        "found_keywords": [],
+        "quality_score": 0.0
+      }
+    ]
+  },
+  "performance_metrics": {
+    "avg_query_time": 0.02396683692932129,
+    "min_query_time": 0.023735761642456055,
+    "max_query_time": 0.024079084396362305
+  }
+}
