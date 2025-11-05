@@ -1,0 +1,20 @@
+============================================================
+RAG EVALUATION RESULTS SUMMARY
+============================================================
+
+SIMILARITY STATISTICS:
+  Mean similarity: 0.847
+  Std deviation: 0.083
+  Coefficient of variation: 0.098
+
+RETRIEVAL QUALITY:
+  Hit rate (top-1): 33.3%
+  By difficulty:
+    easy: 100.0%
+    medium: 16.7%
+    hard: 16.7%
+
+PERFORMANCE:
+  Average query time: 0.024s
+
+============================================================
